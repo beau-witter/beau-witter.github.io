@@ -1,8 +1,17 @@
 <head>
-    <link rel="icon" type="image/png" href="/_images/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="/_images/favicon.svg" />
-    <link rel="shortcut icon" href="/_images/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/_images/apple-touch-icon.png" />
-    <meta name="apple-mobile-web-app-title" content="MyWebSite" />
-    <link rel="manifest" href="/_images/site.webmanifest" />
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {%- seo -%}
+  <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
+  <link rel="icon" type="image/png" href="/_images/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/_images/favicon.svg" />
+  <link rel="shortcut icon" href="/_images/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/_images/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="MyWebSite" />
+  <link rel="manifest" href="/_images/site.webmanifest" />
+  {%- feed_meta -%}
+  {%- if jekyll.environment == 'production' and site.google_analytics -%}
+    {%- include google-analytics.html -%}
+  {%- endif -%}
 </head>
